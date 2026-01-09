@@ -23,6 +23,6 @@ export default defineConfig({
   build: {
     outDir: 'dist',
   },
-  base: '/',
+  base: process.env.GITHUB_PAGES === 'true' ? '/Personal-Website-Portfolio/' : '/',
 })
 
