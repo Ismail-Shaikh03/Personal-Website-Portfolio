@@ -1,0 +1,109 @@
+.skills-section {
+  padding: 100px 20px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.skills-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.skills-main-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 50px 0;
+  line-height: 1.2;
+  color: #0f172a;
+}
+
+.skills-main-title::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  background: #3b82f6;
+  border-radius: 2px;
+  margin: 10px auto 0;
+}
+
+.skills-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.skill-category {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.05);
+}
+
+.skill-category:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15);
+  transform: translateY(-4px);
+}
+
+.category-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 16px 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #3b82f6;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-list span {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1e40af;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.1);
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.skills-list span:hover {
+  background: #3b82f6;
+  color: white;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+@media (max-width: 768px) {
+  .skills-categories {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .skills-main-title {
+    font-size: 2rem;
+  }
+}
+
