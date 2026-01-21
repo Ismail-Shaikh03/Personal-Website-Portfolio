@@ -4,7 +4,7 @@ export function useActiveSection() {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
-    const sections = ['home', 'about', 'skills', 'portfolio', 'resume', 'contact'];
+    const sections = ['home', 'about', 'skills', 'portfolio', 'in-progress', 'resume', 'contact'];
     const navbarHeight = 70;
     
     const handleScroll = () => {

@@ -4,6 +4,7 @@ import Hero from './Hero';
 import About from './About';
 import Skills from './Skills';
 import Portfolio from './Portfolio';
+import InProgress from './InProgress';
 import Resume from './Resume';
 import Contact from './Contact';
 import { useActiveSection } from './useActiveSection';
@@ -75,6 +76,12 @@ function App() {
             Portfolio
           </p>
           <p 
+            onClick={() => scrollToSection('in-progress')}
+            className={activeSection === 'in-progress' ? 'active' : ''}
+          >
+            In Progress
+          </p>
+          <p 
             onClick={() => scrollToSection('resume')}
             className={activeSection === 'resume' ? 'active' : ''}
           >
@@ -94,6 +101,7 @@ function App() {
         <About />
         <Skills />
         <Portfolio />
+        <InProgress />
         <Resume />
         <Contact />
       </div>
