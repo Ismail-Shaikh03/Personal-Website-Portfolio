@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [
     react({
-      include: '**/*.{jsx,js}',
+      include: '**/*.{jsx,js,tsx,ts}',
     }),
   ],
   esbuild: {
@@ -23,6 +23,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
   },
-  base: '/',
+  // Project Pages: https://ismail-shaikh03.github.io/Personal-Website-Portfolio/
+  base: process.env.GITHUB_PAGES === 'true' ? '/Personal-Website-Portfolio/' : '/',
 })
 
