@@ -23,7 +23,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
   },
-  // Project Pages: https://ismail-shaikh03.github.io/Personal-Website-Portfolio/
-  base: process.env.GITHUB_PAGES === 'true' ? '/Personal-Website-Portfolio/' : '/',
+  // Custom domain (ismail-shaikh.com) serves from repo root; local dev uses / as well.
+  base: '/',
 })
 
