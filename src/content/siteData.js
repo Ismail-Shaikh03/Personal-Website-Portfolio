@@ -30,7 +30,7 @@ export const about = {
     ['SCHOOL', 'New Jersey Institute of Technology'],
     ['DEGREE', 'B.S. Computer Science'],
     ['GRAD', 'May 2026'],
-    ['LOCATION', 'Newark, NJ'],
+    ['LOCATION', 'Elmwood Park, NJ'],
     ['STATUS', 'Seeking Opportunities'],
   ],
   coursework:
