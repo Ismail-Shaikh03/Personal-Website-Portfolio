@@ -145,8 +145,9 @@ export default function App() {
                   <button
                     key={t.id}
                     type="button"
+                    className={`nav-tape-btn${activeId === t.id ? ' nav-tape-btn--active' : ''}`}
+                    style={{ '--tape-spine': t.spine }}
                     onClick={() => switchTape(t.id)}
-                    style={{ background: activeId === t.id ? t.spine : 'rgba(255,255,255,0.05)', border: `1px solid ${activeId === t.id ? t.spine : '#2a2a2a'}`, color: activeId === t.id ? '#000' : '#666', fontFamily: "'VT323', monospace", fontSize: 'clamp(12px,3vw,14px)', padding: '6px 12px', minHeight: 36, cursor: 'pointer', letterSpacing: '0.08em', whiteSpace: 'nowrap', flexShrink: 0, touchAction: 'manipulation' }}
                   >
                     {t.title}
                   </button>
